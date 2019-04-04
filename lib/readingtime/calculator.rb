@@ -69,9 +69,9 @@ module Readingtime
 
     def format_approx(seconds)
       if seconds > 59
-        '%d minutes' % (seconds.to_f/60).round
+        I18n.translate('datetime.distance_in_words.x_minutes.other', count: (seconds.to_f/60).round)
       else
-        '%d seconds' % seconds
+        I18n.translate('datetime.distance_in_words.x_seconds.other', count: seconds)
       end
     end
 
